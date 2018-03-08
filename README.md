@@ -16,17 +16,13 @@ npm run dev
 > sw.js
 >>add 3 EventListener
 >>>Install
-
 >>>Activate
-
 >>>Fetch
 
 
 ##本PWA三功能
 >離線快取
-
 >手動加入主頁面
-
 >手動推播訊息
 
 
