@@ -76,10 +76,17 @@ function AddNotification(){
       console.log(Notification.permission) //取得是否取得權限
       if(Notification.permission == 'granted'){
         let option = {
-          body:'Hello World!',
-          image: '/src/assets/offline.jpg'
+          body:'測試內文',
+          tag: '不知道是什麼',
+          icon: '/src/images/icons/app-icon-144x144.png',  
+          //badge:    左上角的小icon 只能16x16白色單色
         }
-        new Notification('test app',option) //推播提醒
+        //new Notification('test app',option) //推播提醒 (已棄用)
+
+        //新的推播方式
+        navigator.serviceWorker.ready.then(function(registration) {
+          registration.showNotification('測試標題5',option)
+        })
       }
     })
   }
